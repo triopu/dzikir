@@ -1,0 +1,7 @@
+include: package:flutter_lints/flutter.yaml
+linter:
+  rules:
+    unnecessary_overrides: false
+    use_super_parameters: false
+    constant_identifier_names: false
+    

@@ -1,0 +1,47 @@
+name: dzikir
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=3.1.5 <4.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  get: 4.6.6
+  flutter: 
+    sdk: flutter
+  rename_app: ^1.3.2 # flutter pub run rename_app:main all="Dzikir"
+  flutter_native_splash: ^2.3.7
+  percent_indicator: ^4.2.3
+  vibration: ^1.8.4
+  avatar_glow: ^3.0.1
+  appinio_swiper: ^2.1.0
+
+dev_dependencies: 
+  flutter_lints: 3.0.1
+  flutter_test: 
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+
+flutter: 
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/data/
+  fonts:
+    - family: NotoNaskhArabic
+      fonts:
+        - asset: assets/fonts/NotoNaskhArabic-VariableFont_wght.ttf
+
+# flutter pub run flutter_launcher_icons
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/app-icon.png"
+
+# dart run flutter_native_splash:create
+flutter_native_splash:
+  color: "#43cea2"
+  image: assets/images/icon.png
+
