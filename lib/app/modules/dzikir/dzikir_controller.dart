@@ -33,7 +33,7 @@ class DzikirController extends GetxController {
     index.value = 0;
   }
 
-  buttonRight() {
+  right() {
     if (isSwiping.value) return;
     if (index.value == dzikirs.length - 1) Get.back();
     if (index.value < dzikirs.length - 1) {
@@ -41,7 +41,7 @@ class DzikirController extends GetxController {
     }
   }
 
-  buttonLeft() {
+  left() {
     if (isSwiping.value) return;
     if (index.value == 0) return;
     controller.unswipe();
@@ -49,11 +49,11 @@ class DzikirController extends GetxController {
 
   buttonDzikir(int maxCount) async {
     if (animate.value) return;
-    if (count.value == maxCount) return;
     if (count.value < maxCount) count.value += 1;
     animate.value = true;
     await Future.delayed(const Duration(milliseconds: 500));
     animate.value = false;
+    if (count.value == maxCount) right();
   }
 
   Future<void> vibrate() async {

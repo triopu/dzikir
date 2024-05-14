@@ -112,7 +112,7 @@ class DzikirView extends GetView<DzikirController> {
                         CircularButton(
                           backgroundColor: Colors.green,
                           onPressed: () {
-                            controller.buttonLeft();
+                            controller.left();
                           },
                           icon: Icons.navigate_before,
                         ),
@@ -156,7 +156,7 @@ class DzikirView extends GetView<DzikirController> {
                         CircularButton(
                           backgroundColor: Colors.green,
                           onPressed: () {
-                            controller.buttonRight();
+                            controller.right();
                           },
                           icon: Icons.navigate_next,
                         ),
