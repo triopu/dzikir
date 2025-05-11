@@ -57,7 +57,7 @@ class DzikirController extends GetxController {
   }
 
   Future<void> vibrate() async {
-    bool canVibrate = await Vibration.hasVibrator() ?? false;
+    bool canVibrate = await Vibration.hasVibrator();
     if (canVibrate) {
       Vibration.vibrate(duration: 100);
     }
